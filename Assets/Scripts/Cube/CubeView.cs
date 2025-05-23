@@ -17,5 +17,10 @@ namespace CubeColorCycler.Cube
         {
             _cubeMaterial.material.color = cubeMaterial.color;
         }
+
+        public Material GetCubeMaterial()
+        {
+            return _cubeMaterial.material;
+        }
     }
 }
