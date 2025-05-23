@@ -1,16 +1,26 @@
+using System;
 using UnityEngine;
 
-public class CubeView : MonoBehaviour
+namespace CubeColorCycler.Cube
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class CubeView : MonoBehaviour
     {
+        private CubeController _cubeController;
         
-    }
+        private Material _cubeMaterial;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            _cubeMaterial = GetComponent<Renderer>().material;
+        }
+
+        public void SetCubeController(CubeController cubeController)
+        {
+            _cubeController = cubeController;
+        }
+        public void SetCubeColor(Material cubeMaterial)
+        {
+            _cubeMaterial = cubeMaterial;
+        }
     }
 }

@@ -1,16 +1,20 @@
+using System;
+using System.Collections.Generic;
+using CubeColorCycler.Cube;
 using UnityEngine;
 
-public class ColorManager : MonoBehaviour
+namespace CubeColorCycler.Color
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class ColorManager : MonoBehaviour
     {
-        
-    }
+        private List<CubeController> cubeControllers = new List<CubeController>();
+        [SerializeField] private Material[] colors;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void Start()
+        {
+            
+        }
+        
         
     }
 }
