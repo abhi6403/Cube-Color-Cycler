@@ -16,19 +16,43 @@ namespace CubeColorCycler.Color
         [SerializeField] private List<Material> colors;
 
         private int _spawnDistance = 6;
+        private float _initialWaitTime = 2f;
+        private float _waitTime = 3f;
+        private float lastChangeTime;
+        private bool _isInitialized;
         private void Start()
         {
             for (int i = 0; i < numberOfCubes; i++)
             {
                 CreateCube(i);
             }
+            
         }
 
         private void Update()
         {
-            
+           CheckTimer();
         }
 
+        private void CheckTimer()
+        {
+            if (!_isInitialized)
+            {
+                if (Time.time >= _initialWaitTime)
+                {
+                    _isInitialized = true;
+                }
+            }
+            
+            if (_isInitialized)
+            {
+                if (Time.time >= lastChangeTime + _waitTime)
+                {
+                    CycleColors();
+                    lastChangeTime = Time.time;
+                }
+            }
+        }
         private void CycleColors()
         {
             if (colors.Count != _cubeControllers.Count || colors.Count < 2)
