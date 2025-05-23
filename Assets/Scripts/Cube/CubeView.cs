@@ -7,12 +7,7 @@ namespace CubeColorCycler.Cube
     {
         private CubeController _cubeController;
         
-        private Material _cubeMaterial;
-
-        private void Start()
-        {
-            _cubeMaterial = GetComponent<Renderer>().material;
-        }
+        [SerializeField] private Renderer _cubeMaterial;
 
         public void SetCubeController(CubeController cubeController)
         {
@@ -20,7 +15,7 @@ namespace CubeColorCycler.Cube
         }
         public void SetCubeColor(Material cubeMaterial)
         {
-            _cubeMaterial = cubeMaterial;
+            _cubeMaterial.material.color = cubeMaterial.color;
         }
     }
 }

@@ -20,13 +20,13 @@ namespace CubeColorCycler.Color
         {
             for (int i = 0; i < numberOfCubes; i++)
             {
-                CreateCube();
+                CreateCube(i);
             }
         }
 
-        private void CreateCube()
+        private void CreateCube(int colorNumber)
         {
-            _cubeController = new CubeController(cubeView, cubePosition);
+            _cubeController = new CubeController(cubeView, cubePosition,colors[colorNumber]);
             _cubeControllers.Add(_cubeController);
             IncreasePosition();
         }
