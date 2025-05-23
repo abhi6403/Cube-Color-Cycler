@@ -6,9 +6,9 @@ namespace CubeColorCycler.Cube
     {
         private CubeView _cubeView;
 
-        public CubeController(CubeView cubeView)
+        public CubeController(CubeView cubeView,Vector3 cubePosition)
         {
-            _cubeView = GameObject.Instantiate(cubeView);
+            _cubeView = GameObject.Instantiate(cubeView,cubePosition,Quaternion.identity);
             _cubeView.SetCubeController(this);
         }
 
