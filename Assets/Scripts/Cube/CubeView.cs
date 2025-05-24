@@ -24,7 +24,7 @@ namespace CubeColorCycler.Cube
         {
             _colorText.text = _materialName;
         }
-        public void SetCubeColor(ColorManager.ColorData cubeMaterial)
+        public void SetCubeColor(ColorDataSO cubeMaterial)
         {
             _cubeMaterial.material.color = cubeMaterial.material.color;
             _materialName = cubeMaterial.material.name;

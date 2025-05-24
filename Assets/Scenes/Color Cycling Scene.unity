@@ -151,17 +151,10 @@ MonoBehaviour:
   numberOfCubes: 3
   cubeView: {fileID: 8058151075912331030, guid: d7dce3df14641bd46b1f3946c7900207, type: 3}
   cubePosition: {x: -6, y: -2, z: -10}
-  colors:
-  - {fileID: 2100000, guid: 1968e4b57f980f44196cfc6a481083e0, type: 2}
-  - {fileID: 2100000, guid: 90659824575df3d4a8b512ff5b0d2d84, type: 2}
-  - {fileID: 2100000, guid: d68b257714baf8e4585a6cd5507f8037, type: 2}
   cubeColors:
-  - material: {fileID: 2100000, guid: 90659824575df3d4a8b512ff5b0d2d84, type: 2}
-    name: Blue
-  - material: {fileID: 2100000, guid: d68b257714baf8e4585a6cd5507f8037, type: 2}
-    name: Green
-  - material: {fileID: 2100000, guid: 1968e4b57f980f44196cfc6a481083e0, type: 2}
-    name: Red
+  - {fileID: 11400000, guid: bc96a79f55cca824681c7a6ff7c505f5, type: 2}
+  - {fileID: 11400000, guid: ab7764570280ad34e95c1845533d0ca4, type: 2}
+  - {fileID: 11400000, guid: 897840480f8468c4a97cf0f292661fb3, type: 2}
 --- !u!4 &433917533
 Transform:
   m_ObjectHideFlags: 0

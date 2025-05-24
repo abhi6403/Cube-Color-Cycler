@@ -13,15 +13,8 @@ namespace CubeColorCycler.Color
         [SerializeField] private int numberOfCubes;
         [SerializeField] private CubeView cubeView;
         [SerializeField] private Vector3 cubePosition;
-        [SerializeField] private List<Material> colors;
-        [SerializeField] private List<ColorData> cubeColors;
-
-        [Serializable]
-        public class ColorData
-        {
-            public Material material;
-            public String name;
-        }
+        [SerializeField] private List<ColorDataSO> cubeColors;
+        
 
         private int _spawnDistance = 6;
         private float _initialWaitTime = 2f;
@@ -68,7 +61,7 @@ namespace CubeColorCycler.Color
                 return;
             }
             
-            ColorData lastMaterial = cubeColors[cubeColors.Count - 1];
+            ColorDataSO lastMaterial = cubeColors[cubeColors.Count - 1];
             
             for (int i = cubeColors.Count - 1; i > 0; i--)
             {

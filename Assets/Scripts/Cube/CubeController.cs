@@ -7,14 +7,14 @@ namespace CubeColorCycler.Cube
     {
         private CubeView _cubeView;
 
-        public CubeController(CubeView cubeView,Vector3 cubePosition,ColorManager.ColorData cubeMaterial)
+        public CubeController(CubeView cubeView,Vector3 cubePosition,ColorDataSO cubeMaterial)
         {
             _cubeView = GameObject.Instantiate(cubeView,cubePosition,Quaternion.identity);
             _cubeView.SetCubeController(this);
             SetCubeColor(cubeMaterial);
         }
 
-        public void SetCubeColor(ColorManager.ColorData material)
+        public void SetCubeColor(ColorDataSO material)
         {
             _cubeView.SetCubeColor(material);
         }
