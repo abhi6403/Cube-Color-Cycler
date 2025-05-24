@@ -14,6 +14,14 @@ namespace CubeColorCycler.Color
         [SerializeField] private CubeView cubeView;
         [SerializeField] private Vector3 cubePosition;
         [SerializeField] private List<Material> colors;
+        [SerializeField] private List<ColorData> cubeColors;
+
+        [Serializable]
+        public class ColorData
+        {
+            public Material material;
+            public String name;
+        }
 
         private int _spawnDistance = 6;
         private float _initialWaitTime = 2f;
@@ -55,27 +63,27 @@ namespace CubeColorCycler.Color
         }
         private void CycleColors()
         {
-            if (colors.Count != _cubeControllers.Count || colors.Count < 2)
+            if (cubeColors.Count != _cubeControllers.Count || cubeColors.Count < 2)
             {
                 return;
             }
             
-            Material lastMaterial = colors[colors.Count - 1];
+            ColorData lastMaterial = cubeColors[cubeColors.Count - 1];
             
-            for (int i = colors.Count - 1; i > 0; i--)
+            for (int i = cubeColors.Count - 1; i > 0; i--)
             {
-                colors[i] = colors[i - 1];
+                cubeColors[i] = cubeColors[i - 1];
             }
-            colors[0] = lastMaterial;
+            cubeColors[0] = lastMaterial;
             
             for (int i = 0; i < _cubeControllers.Count; i++)
             {
-                _cubeControllers[i].SetCubeColor(colors[i]);
+                _cubeControllers[i].SetCubeColor(cubeColors[i]);
             }
         }
         private void CreateCube(int colorNumber)
         {
-            _cubeController = new CubeController(cubeView, cubePosition,colors[colorNumber]);
+            _cubeController = new CubeController(cubeView, cubePosition,cubeColors[colorNumber]);
             _cubeControllers.Add(_cubeController);
             IncreasePosition();
         }

@@ -1,3 +1,4 @@
+using CubeColorCycler.Color;
 using UnityEngine;
 
 namespace CubeColorCycler.Cube
@@ -6,21 +7,16 @@ namespace CubeColorCycler.Cube
     {
         private CubeView _cubeView;
 
-        public CubeController(CubeView cubeView,Vector3 cubePosition,Material cubeMaterial)
+        public CubeController(CubeView cubeView,Vector3 cubePosition,ColorManager.ColorData cubeMaterial)
         {
             _cubeView = GameObject.Instantiate(cubeView,cubePosition,Quaternion.identity);
             _cubeView.SetCubeController(this);
             SetCubeColor(cubeMaterial);
         }
 
-        public void SetCubeColor(Material material)
+        public void SetCubeColor(ColorManager.ColorData material)
         {
             _cubeView.SetCubeColor(material);
-        }
-
-        public Material GetCubeMaterial()
-        {
-            return _cubeView.GetCubeMaterial();
         }
     }
 }

@@ -1,4 +1,7 @@
 using System;
+using CubeColorCycler.Color;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CubeColorCycler.Cube
@@ -8,19 +11,24 @@ namespace CubeColorCycler.Cube
         private CubeController _cubeController;
         
         [SerializeField] private Renderer _cubeMaterial;
+        [SerializeField] private TextMeshProUGUI _colorText;
 
+        private string _materialName;
+        
         public void SetCubeController(CubeController cubeController)
         {
             _cubeController = cubeController;
         }
-        public void SetCubeColor(Material cubeMaterial)
-        {
-            _cubeMaterial.material.color = cubeMaterial.color;
-        }
 
-        public Material GetCubeMaterial()
+        private void SetColorText()
         {
-            return _cubeMaterial.material;
+            _colorText.text = _materialName;
+        }
+        public void SetCubeColor(ColorManager.ColorData cubeMaterial)
+        {
+            _cubeMaterial.material.color = cubeMaterial.material.color;
+            _materialName = cubeMaterial.material.name;
+            SetColorText();
         }
     }
 }

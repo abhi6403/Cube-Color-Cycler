@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9881af48-05c7-403a-be62-b4131fc8765b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube Color Cycler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube Color Cycler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Color Cycling Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Color Cycling Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ColorManager/ColorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ColorManager/ColorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube/CubeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cube/CubeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube/CubeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cube/CubeView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +36,7 @@
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Feature-1-Cubes&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feature-2-UI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,7 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1747999932485</updated>
       <workItem from="1747999935114" duration="5587000" />
-      <workItem from="1748006193156" duration="1352000" />
+      <workItem from="1748006193156" duration="4914000" />
+      <workItem from="1748013367943" duration="690000" />
+      <workItem from="1748080236973" duration="1760000" />
     </task>
     <servers />
   </component>

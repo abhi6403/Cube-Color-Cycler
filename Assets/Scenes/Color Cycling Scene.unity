@@ -155,6 +155,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1968e4b57f980f44196cfc6a481083e0, type: 2}
   - {fileID: 2100000, guid: 90659824575df3d4a8b512ff5b0d2d84, type: 2}
   - {fileID: 2100000, guid: d68b257714baf8e4585a6cd5507f8037, type: 2}
+  cubeColors:
+  - material: {fileID: 2100000, guid: 90659824575df3d4a8b512ff5b0d2d84, type: 2}
+    name: Blue
+  - material: {fileID: 2100000, guid: d68b257714baf8e4585a6cd5507f8037, type: 2}
+    name: Green
+  - material: {fileID: 2100000, guid: 1968e4b57f980f44196cfc6a481083e0, type: 2}
+    name: Red
 --- !u!4 &433917533
 Transform:
   m_ObjectHideFlags: 0
