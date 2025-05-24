@@ -9,14 +9,15 @@ namespace CubeColorCycler.Cube
 
         public CubeController(CubeView cubeView,Vector3 cubePosition,ColorDataSO cubeMaterial)
         {
-            _cubeView = GameObject.Instantiate(cubeView,cubePosition,Quaternion.identity);
+            _cubeView = GameObject.Instantiate(cubeView,cubePosition,Quaternion.identity);                              // Instantiate a new CubeView at the specified position
             _cubeView.SetCubeController(this);
-            SetCubeColor(cubeMaterial);
+            SetCubeData(cubeMaterial);
         }
 
-        public void SetCubeColor(ColorDataSO material)
+        // Public method to update the cube's color using a ColorDataSO asset
+        public void SetCubeData(ColorDataSO material)
         {
-            _cubeView.SetCubeColor(material);
+            _cubeView.SetCubeData(material);
         }
     }
 }
